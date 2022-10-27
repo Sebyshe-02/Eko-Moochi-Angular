@@ -1,0 +1,65 @@
+$breakpoints: (
+    sm : 540px,
+    md : 786px,
+    lg : 1024px,
+);
+
+@mixin media-up($breakpoint) {
+    @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
+.header{
+    background: rebeccapurple;
+    color: white;
+    padding: 2rem 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    @include media-up(lg){
+        background: red;
+    }
+}
+
+.header a{
+    color: white;
+    text-decoration: none;
+}
+
+.logo{
+    letter-spacing: 15px;
+    font-size: 1em;
+}
+
+.logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navBar ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @include media-up(md){
+        visibility: hidden;
+    }
+}
+
+.navBar ul li{
+    display: inline-block;
+}
+
+.navBar ul li a{
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+
+.navBar ul li a:hover{
+    background: rgb(167, 101, 232);
+}
+
+
