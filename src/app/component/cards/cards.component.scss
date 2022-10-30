@@ -1,0 +1,76 @@
+$breakpoints: (
+    sm : 540px,
+    md : 786px,
+    lg : 992px,
+);
+
+@mixin media-up($breakpoint) {
+    @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#seleccion-criaturas {
+    background-color: rgb(30,30,30);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 100px;
+}
+
+#seleccion-criaturas .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px, 0px;
+}
+
+#seleccion-criaturas h2 {
+    margin-top: 0;
+}
+
+#seleccion-criaturas p{
+    @include media-up(lg){
+        display: none;
+    }
+
+}
+
+#seleccion-criaturas .cartas {
+    
+    background-position: center, center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+#seleccion-criaturas .criaturas {
+    display: flex;
+}
+
+.cartas:first-child {
+    background-image: url(../../../assets/img/cat1.jpg);
+    
+}
+
+.cartas:nth-child(2) {
+    background-image: url(../../../assets/img/dog1.jpg);
+}
+
+.cartas:nth-child(3){
+    background-image: url(../../../assets/img/cat3.jpg);
+}
+
+button{
+    
+}
