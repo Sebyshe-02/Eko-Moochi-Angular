@@ -26,8 +26,6 @@ $breakpoints: (
     background-position: center center;
     position: relative;
     background-size: cover;
-
-    
 }
 
 .hero-texto {
@@ -44,15 +42,20 @@ $breakpoints: (
     button {
         background: rebeccapurple;
         color: white;
-        border-radius: 8px;
-        height: 60px;
+        border-radius: 4px;
+        border: none;
+        height: 55px;
+        width: 110px;
         text-align: center;
+        margin: 50px;
     }
 }
 
 #presentacion {
-    height: 200px;
-    margin: 30px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #presentacion .container{
@@ -60,7 +63,7 @@ $breakpoints: (
     text-align: center;
     padding: 200px, 12px;
     justify-content: center;
-    margin-top: 30px;
+    
     margin-bottom: 120px;
 }
 
@@ -75,6 +78,8 @@ $breakpoints: (
     position: relative;
     background-position: center, center;
     background-size: cover;
+    justify-content: center;
+    align-items: center;
 }
 
 #presentacion .texto{
@@ -82,7 +87,7 @@ $breakpoints: (
     width: 50%;
     text-align: initial;
     padding: 10px, 30px;
-    margin-left: 10px;
+    margin-left: 50px;
     flex-direction: column;
     justify-content: center;
     margin-top: 60px;
